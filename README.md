@@ -1,36 +1,28 @@
-# \# PKL Fullstack Project
+# Sawala Learning Project - Progress PKL
 
-# 
+Repo ini berisi progress belajaar selama PKL, mengikuti roadmap 10 minggu (JavaScript, TypeScript, Node.Js, React, Next.Js + Strapi).
 
-# Repo ini berisi project dan latihan selama Praktik Kerja Lapangan (PKL), termasuk latihan JavaScript dasar (variabel, function, array methods) dan pengembangan fullstack.
+## Struktur Milestone
 
-# 
+| Milestone | Folder | Fokus | Status |
+|---|---|---|---|
+| 1 | `01-javascript-fundamentals/` | Fondasi & JavaScript Modern | Selesai |
+| 2 | `02-async-api-typescript/` | Async JS, API & TypeScript | Belum |
+| 3 | `03-nodejs-fundamentals/` | Node.js Fundamentals | Belum |
+| 4 | `04-react-fundamentals/` | React Fundamentals | Belum |
+| 5 | `05-nextjs-strapi-final-project/` | Next.js + Strapi | Belum |
 
-# \## Isi Project
+## Progress Minggu 1-2 (Selesai)
 
-# \- Latihan dasar JavaScript (kalkulator, pengolahan data)
+- [x] Variabel & tipe data
+- [x] Kondisi & Function (mini exercise: kalkulator)
+- [x] Object & Array
+- [x] Looping & array methods
+- [x] Destructuring & spread
+- [x] ES Modules
+- [x] Mini project: daftar produk dengan filter & pencarian
 
-# \- Project fullstack (akan ditambahkan bertahap)
-
-# 
-
-# \## Cara Pakai
-
-# 1\. Clone repo ini
-
-# 2\. Buka file `.js` di browser console, atau jalankan dengan Node.js
-
-# 3\. Ikuti instruksi di masing-masing folder/file latihan
-
-# 
-
-# \## Progress
-
-# \- \[x] Setup repo \& Git
-
-# \- \[ ] Mini exercise: kalkulator sederhana
-
-# \- \[ ] Mini exercise: pengolahan data siswa
-
-# \- \[ ] Mini project: daftar produk dengan filter
-
+## Cara menjalankan salah satu file:
+\`\`\`bash
+node 01-javascript-fundamentals/01-variabel-tipe-data/index.js
+\`\`\`
