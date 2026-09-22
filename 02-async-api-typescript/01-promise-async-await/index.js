@@ -27,6 +27,8 @@ async function prosesPesanan() {
         console.log(hasil2);
     } catch (error) {
         console.log("Gagal pesan:", error);
+    } finally {
+        console.log("Proses pesanan selesai")
     }
 }
 
