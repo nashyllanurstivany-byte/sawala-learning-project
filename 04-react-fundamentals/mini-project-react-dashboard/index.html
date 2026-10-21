@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Artikel</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      // Komponen Card
+      function Card({ title, body }) {
+        return (
+          <div style={{ border: '1px solid #ccc', padding: '15px', margin: '10px 0', borderRadius: '8px' }}>
+            <h3 style={{ marginTop: 0 }}>{title}</h3>
+            <p style={{ margin: 0, color: '#555' }}>{body}</p>
+          </div>
+        );
+      }
+
+      // Komponen Button
+      function Button({ text, onClick }) {
+        return (
+          <button onClick={onClick} style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px' }}>
+            {text}
+          </button>
+        );
+      }
+
+      // Komponen Utama App
+      function App() {
+        // Data awal pakai bahasa Indonesia
+        const dataAwal = [
+          { id: 1, title: "Belajar Node.js dari Nol", body: "Node.js adalah runtime JavaScript yang berjalan di server." },
+          { id: 2, title: "Membuat REST API dengan Express", body: "Express memudahkan kita membuat routing dan middleware dengan cepat." },
+          { id: 3, title: "Mengenal React Fundamental", body: "React adalah library UI yang memungkinkan kita membuat komponen yang reaktif." }
+        ];
+
+        const [articles, setArticles] = useState(dataAwal);
+        const [isLoading, setIsLoading] = useState(true);
+        const [newTitle, setNewTitle] = useState("");
+
+        // Simulasi loading sebentar
+        useEffect(() => {
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 1000); // Loading 1 detik
+        }, []);
+
+        // Fungsi tambah artikel
+        const handleAddArticle = () => {
+          if (!newTitle) return;
+          const newArticle = {
+            id: Date.now(),
+            title: newTitle,
+            body: "Artikel baru berhasil ditambahkan dari form input."
+          };
+          setArticles([newArticle, ...articles]);
+          setNewTitle(""); 
+        };
+
+        return (
+          <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto' }}>
+            <h1 style={{ color: '#333' }}>Dashboard Artikel</h1>
+            
+            {/* Form Tambah Artikel */}
+            <div style={{ marginBottom: '30px', display: 'flex', gap: '10px' }}>
+              <input 
+                type="text" 
+                placeholder="Ketik judul artikel baru..." 
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)} 
+                style={{ padding: '8px', flex: 1, borderRadius: '4px', border: '1px solid #ccc' }}
+              />
+              <Button text="Tambah Artikel" onClick={handleAddArticle} />
+            </div>
+
+            {/* Conditional Rendering */}
+            {isLoading ? (
+              <p style={{ textAlign: 'center', color: 'gray' }}>Sedang memuat data artikel...</p>
+            ) : (
+              <div>
+                {/* List Rendering */}
+                {articles.map((article) => (
+                  <Card key={article.id} title={article.title} body={article.body} />
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      }
+
+      // Render ke HTML
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
