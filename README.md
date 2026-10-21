@@ -9,7 +9,7 @@ Repo ini berisi progress belajar selama PKL, mengikuti roadmap 10 minggu (JavaSc
 | 1         | `01-javascript-fundamentals/`     | Fondasi & JavaScript Modern | Selesai |
 | 2         | `02-async-api-typescript/`        | Async JS, API & TypeScript  | Selesai |
 | 3         | `03-nodejs-fundamentals/`         | Node.js Fundamentals        | Selesai |
-| 4         | `04-react-fundamentals/`          | React Fundamentals          | Belum   |
+| 4         | `04-react-fundamentals/`          | React Fundamentals          | Selesai |
 | 5         | `05-nextjs-strapi-final-project/` | Next.js + Strapi            | Belum   |
 
 ---
@@ -105,6 +105,29 @@ Repo ini berisi progress belajar selama PKL, mengikuti roadmap 10 minggu (JavaSc
 _(Sesuaikan dengan folder yang ingin kamu jalankan)_
 
 1. **Clone repository ini:**
+
    ```bash
    git clone https://github.com/USERNAME/sawala-learning-project.git
    ```
+
+   ### Minggu 7-8: React Fundamentals
+
+**Materi:**
+
+- [x] JSX dan component
+- [x] Props dan state
+- [x] Event handling
+- [x] Conditional rendering dan list rendering
+- [x] useEffect dasar
+
+**Output:**
+
+- [x] Bisa membangun UI dari komponen-komponen kecil
+- [x] Paham aliran data dari parent ke child
+- [x] Mini project: artikel/dashboard sederhana berbasis React + TypeScript
+
+**GitHub:**
+
+- [x] Kolaborasi lewat branch dan PR
+- [x] Review struktur component bersama
+- [x] Update progress di README
